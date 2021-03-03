@@ -176,7 +176,7 @@
                         name="Nombre1"
                         minlength="3"
                         maxlength="90"
-                        [(ngModel)]="contacto.DatosBasicos.Nombre1"
+                        [(ngModel)]="centrales.contacto.DatosBasicos.Nombre1"
                         #nombre="ngModel"
                         (keypress)="patternCoincide($event, env.patternLetter)"
                         [(pattern)]="env.patternLetter"
@@ -192,7 +192,7 @@
                                     <select 
                                         matNativeControl
                                         name="TipoDocumento"
-                                        [(ngModel)]="contacto.DatosBasicos.TipoDocumento"
+                                        [(ngModel)]="centrales.contacto.DatosBasicos.TipoDocumento"
                                         #tipoDocumento="ngModel" 
                                         required
                                     >
@@ -208,7 +208,7 @@
                             matInput
                             type="tel"
                             name="NumeroDocumento"
-                            [(ngModel)]="contacto.DatosBasicos.NumeroDocumento"
+                            [(ngModel)]="centrales.contacto.DatosBasicos.NumeroDocumento"
                             #numeroDocumento="ngModel"
                             minlength="6"
                             maxlength="15"
@@ -230,7 +230,7 @@
                                 type="tel"  
                                 placeholder="Teléfono de contacto"
                                 name="Celular"
-                                [(ngModel)]="contacto.DatosBasicos.Celular"
+                                [(ngModel)]="centrales.contacto.DatosBasicos.Celular"
                                 minlength="10" 
                                 maxlength="10"
                                 #celular="ngModel"
@@ -252,7 +252,7 @@
                             type="text"
                             placeholder="Correo electrónico"
                             name="CorreoPersonal"
-                            [(ngModel)]="contacto.DatosBasicos.CorreoPersonal"
+                            [(ngModel)]="centrales.contacto.DatosBasicos.CorreoPersonal"
                             #correoPersonal="ngModel"
                             [(pattern)]="env.patternMail"
                             required
@@ -267,7 +267,7 @@
                                 <select 
                                     matNativeControl
                                     name="ActividadEconomica"
-                                    [(ngModel)]="contacto.DatosFinancieros.ActividadEconomica"
+                                    [(ngModel)]="centrales.contacto.DatosFinancieros.ActividadEconomica"
                                     #ocupacion="ngModel"
                                     #tipoDocumento="ngModel" 
                                     required
@@ -288,7 +288,7 @@
                                     placeholder="Ingresos Mensuales"
                                     name="ingresoMensual"
                                     #ingresoMensual="ngModel"
-                                    [(ngModel)]="contacto.DatosFinancieros.IngresoMensual"
+                                    [(ngModel)]="centrales.contacto.DatosFinancieros.IngresoMensual"
                                     [min]="min"                                    
                                     required>                               
                                     <mat-error *ngIf="ingresoMensual.touched && ingresoMensual.errors?.required">Inserta tus ingresos mensuales</mat-error>       
@@ -315,7 +315,7 @@
                             value="" 
                             id="defaultCheck1"
                             name="AutorizaConsultaCentrales"
-                            [(ngModel)]="contacto.OtrosDatos.AutorizaConsultaCentrales"
+                            [(ngModel)]="centrales.contacto.OtrosDatos.AutorizaConsultaCentrales"
                             (click)="chechedc()"
                             #autorizaConsultaCentrales="ngModel"
                             ></mat-checkbox>
